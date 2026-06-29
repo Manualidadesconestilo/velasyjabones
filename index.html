@@ -1,1150 +1,854 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Curso de Velas y Jabones Artesanales | Aprende desde Cero</title>
-
-<meta name="description" content="Aprende a crear velas aromáticas y jabones artesanales desde cero. Curso 100% online con acceso de por vida.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-background:#fbfaf8;
-color:#333;
-overflow-x:hidden;
-
-}
-
-a{
-
-text-decoration:none;
-
-}
-
-img{
-
-max-width:100%;
-display:block;
-
-}
-
-.container{
-
-width:90%;
-max-width:1200px;
-margin:auto;
-
-}
-
-header{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:1000;
-background:#ffffff;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-}
-
-nav{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-
-}
-
-.logo{
-
-font-size:28px;
-font-weight:800;
-color:#be7b34;
-
-}
-
-.menu{
-
-display:flex;
-gap:30px;
-
-}
-
-.menu a{
-
-color:#333;
-font-weight:500;
-transition:.3s;
-
-}
-
-.menu a:hover{
-
-color:#be7b34;
-
-}
-
-.btn{
-
-display:inline-block;
-padding:16px 35px;
-background:#be7b34;
-color:#fff;
-border-radius:50px;
-font-weight:700;
-transition:.3s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-3px);
-background:#9c5e1e;
-
-}
-
-.hero{
-
-padding-top:140px;
-padding-bottom:90px;
-
-background:
-
-linear-gradient(
-135deg,
-rgba(255,255,255,.92),
-rgba(255,247,234,.95)
-),
-
-url('img/hero.jpg');
-
-background-size:cover;
-background-position:center;
-
-}
-
-.hero-grid{
-
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-
-}
-
-.badge{
-
-display:inline-block;
-padding:8px 18px;
-background:#fff;
-border-radius:30px;
-color:#be7b34;
-font-weight:700;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-margin-bottom:20px;
-
-}
-
-.hero h1{
-
-font-size:58px;
-line-height:1.1;
-margin-bottom:25px;
-font-weight:800;
-
-}
-
-.hero p{
-
-font-size:20px;
-line-height:1.8;
-margin-bottom:35px;
-
-}
-
-.hero-list{
-
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-margin-bottom:40px;
-
-}
-
-.hero-list div{
-
-display:flex;
-align-items:center;
-gap:12px;
-
-font-weight:600;
-
-}
-
-.hero-list i{
-
-color:#be7b34;
-font-size:22px;
-
-}
-
-.hero-image{
-
-position:relative;
-
-}
-
-.hero-image img{
-
-border-radius:25px;
-box-shadow:0 30px 60px rgba(0,0,0,.18);
-
-}
-
-.float-card{
-
-position:absolute;
-bottom:25px;
-left:-40px;
-
-background:#fff;
-padding:18px 25px;
-border-radius:20px;
-
-box-shadow:0 20px 35px rgba(0,0,0,.15);
-
-}
-
-.float-card h3{
-
-font-size:34px;
-color:#be7b34;
-
-}
-
-.float-card span{
-
-font-size:14px;
-
-}
-
-section{
-
-padding:90px 0;
-
-}
-
-.title{
-
-text-align:center;
-margin-bottom:60px;
-
-}
-
-.title h2{
-
-font-size:42px;
-margin-bottom:15px;
-
-}
-
-.title p{
-
-max-width:700px;
-margin:auto;
-line-height:1.8;
-
-}
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-
-}
-
-.card{
-
-background:#fff;
-padding:35px;
-border-radius:25px;
-
-transition:.35s;
-
-box-shadow:0 12px 25px rgba(0,0,0,.06);
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-}
-
-.card i{
-
-font-size:45px;
-color:#be7b34;
-margin-bottom:20px;
-
-}
-
-.card h3{
-
-margin-bottom:15px;
-
-}
-
-.gallery{
-
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-
-}
-
-.gallery img{
-
-height:320px;
-object-fit:cover;
-border-radius:20px;
-transition:.4s;
-
-}
-
-.gallery img:hover{
-
-transform:scale(1.05);
-
-}
-
-@media(max-width:900px){
-
-.hero-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-.gallery{
-
-grid-template-columns:1fr;
-
-}
-
-.hero-list{
-
-grid-template-columns:1fr;
-
-}
-
-.float-card{
-
-left:10px;
-
-}
-
-.menu{
-
-display:none;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende a crear Velas y Jabones Artesanales - Manualidades con Estilo</title>
+    
+    <!-- Fuentes elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #c29b72;
+            --primary-dark: #aa8158;
+            --secondary: #2c3e35;
+            --bg-light: #fdfbf7;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar */
+        header {
+            background-color: rgba(253, 251, 247, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-nav {
+            background-color: var(--secondary);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(44, 62, 53, 0.2);
+            transition: all 0.3s !important;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .badge {
+            background-color: #f1eae0;
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 35px;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-tag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+
+        .feature-tag i {
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 20px rgba(194, 155, 114, 0.4);
+            transition: all 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(194, 155, 114, 0.5);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .stats-floating {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--white);
+            padding: 20px 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stats-floating h3 {
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+        /* Section Global */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* Beneficios */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Galería Mejorada */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            height: 350px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(44, 62, 53, 0.85));
+            padding: 30px;
+            color: var(--white);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+
+        /* Temario / Aprenderás */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .topic-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 24px;
+        }
+
+        .topic-card i {
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+        .topic-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .topic-card p {
+            color: var(--text-light);
+        }
+
+        /* Todo lo que recibirás */
+        .included-bg {
+            background-color: #f5efe6;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .included-item {
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .included-item i {
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        /* Bonos */
+        .bonuses-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .bonus-card {
+            background: var(--white);
+            border: 2px dashed #e1d6c7;
+            padding: 30px 24px;
+            border-radius: var(--radius);
+            text-align: center;
+            position: relative;
+        }
+
+        .bonus-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: var(--white);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .bonus-card i {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .bonus-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .bonus-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Contadores Rápidos */
+        .counters-bar {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .counters-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .counter-item h2 {
+            color: var(--primary);
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+
+        .counter-item p {
+            font-size: 15px;
+            opacity: 0.8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Testimonios */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .stars {
+            color: #ffb800;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .testimonial-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* CTA final */
+        .cta-final {
+            background: linear-gradient(rgba(44, 62, 53, 0.9), rgba(44, 62, 53, 0.9)), url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .cta-final h2 {
+            color: var(--white);
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2c25;
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        /* WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            z-index: 2000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsivo básico */
+        @media (max-width: 992px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-features { justify-content: center; }
+            .benefits-grid, .gallery-grid, .included-grid, .bonuses-grid, .counters-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .topics-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+
+        @media (max-width: 576px) {
+            .benefits-grid, .gallery-grid, .included-grid, .bonuses-grid, .counters-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 32px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="container">
-
-<nav>
-
-<div class="logo">
-
-🕯️ Manitas Creativas
-
-</div>
-
-<div class="menu">
-
-<a href="#beneficios">Beneficios</a>
-
-<a href="#galeria">Galería</a>
-
-<a href="#curso">Curso</a>
-
-<a href="#bonos">Bonos</a>
-
-<a href="#faq">Preguntas</a>
-
-</div>
-
-<a href="#" class="btn">
-
-INSCRIBIRME
-
-</a>
-
-</nav>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-grid">
-
-<div>
-
-<div class="badge">
-
-✨ Curso 100% Online
-
-</div>
-
-<h1>
-
-Aprende a crear Velas y Jabones Artesanales
-
-</h1>
-
-<p>
-
-Domina paso a paso las técnicas más modernas para crear productos hermosos, decorar, regalar o emprender desde casa.
-
-</p>
-
-<div class="hero-list">
-
-<div>
-
-<i class="fa-solid fa-circle-check"></i>
-
-+90 Clases
-
-</div>
-
-<div>
-
-<i class="fa-solid fa-circle-check"></i>
-
-Acceso de por Vida
-
-</div>
-
-<div>
-
-<i class="fa-solid fa-circle-check"></i>
-
-Sin Experiencia
-
-</div>
-
-<div>
-
-<i class="fa-solid fa-circle-check"></i>
-
-Certificado
-
-</div>
-
-</div>
-
-<a href="#" class="btn">
-
-QUIERO APRENDER AHORA
-
-</a>
-
-</div>
-
-<div class="hero-image">
-
-<img src="img/hero.jpg" alt="Curso Velas y Jabones">
-
-<div class="float-card">
-
-<h3>
-
-+12.000
-
-</h3>
-
-<span>
-
-Alumnos Capacitados
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- ================= BENEFICIOS ================= -->
-
-<section id="beneficios">
-
-<div class="container">
-
-<div class="title">
-
-<h2>¿Por qué elegir este curso?</h2>
-
-<p>
-Aprende con un método sencillo, práctico y pensado para personas que empiezan desde cero.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-video"></i>
-
-<h3>Clases Paso a Paso</h3>
-
-<p>
-Aprende cada técnica desde lo más básico hasta proyectos más avanzados.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-mobile-screen-button"></i>
-
-<h3>Disponible 24/7</h3>
-
-<p>
-Accede desde celular, computador o tablet cuando quieras.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-award"></i>
-
-<h3>Acceso de por Vida</h3>
-
-<p>
-Compra una sola vez y disfruta del contenido para siempre.
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-briefcase"></i>
-
-<h3>Ideal para Emprender</h3>
-
-<p>
-Convierte esta habilidad en un negocio rentable desde casa.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- ================= GALERÍA ================= -->
-
-<section id="galeria" style="background:#fff;">
-
-<div class="container">
-
-<div class="title">
-
-<h2>Algunos proyectos que podrás crear</h2>
-
-<p>
-
-Velas modernas y jabones artesanales con acabados profesionales.
-
-</p>
-
-</div>
-
-<div class="gallery">
-
-<img src="img/vela1.jpg">
-
-<img src="img/vela2.jpg">
-
-<img src="img/jabon1.jpg">
-
-<img src="img/jabon2.jpg">
-
-<img src="img/vela3.jpg">
-
-<img src="img/jabon3.jpg">
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- ================= CURSO ================= -->
-
-<section id="curso">
-
-<div class="container">
-
-<div class="title">
-
-<h2>¿Qué aprenderás?</h2>
-
-<p>
-
-Todo el contenido fue diseñado para que puedas comenzar desde cero.
-
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-fire"></i>
-
-<h3>Velas Decorativas</h3>
-
-<p>
-
-Aprende velas Bubble, Pilar, Aromáticas,
-Navideñas,
-Flotantes,
-en vaso y mucho más.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-soap"></i>
-
-<h3>Jabones Artesanales</h3>
-
-<p>
-
-Elabora jabones decorativos,
-terapéuticos,
-faciales,
-naturales y personalizados.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-palette"></i>
-
-<h3>Color y Fragancias</h3>
-
-<p>
-
-Descubre cómo mezclar aromas,
-pigmentos,
-esencias
-y obtener acabados profesionales.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-coins"></i>
-
-<h3>Cómo Vender</h3>
-
-<p>
-
-Aprende a calcular costos,
-poner precios
-y comenzar tu propio emprendimiento.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- ================= TODO INCLUYE ================= -->
-
-<section style="background:#fff7ef;">
-
-<div class="container">
-
-<div class="title">
-
-<h2>Todo lo que recibirás</h2>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Curso Completo de Velas</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Curso Completo de Jabones</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Bonos Exclusivos</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Certificado Digital</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Actualizaciones</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Acceso Inmediato</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Acceso de por Vida</h3>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<h3>Soporte del Curso</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!--========================
-        BONOS
-=========================-->
-
-<section id="bonos">
-
-<div class="container">
-
-<div class="title">
-
-<h2>Además recibirás estos Bonos</h2>
-
-<p>
-Todo incluido sin costo adicional.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<i class="fa-solid fa-gift"></i>
-<h3>Bombas de Baño</h3>
-<p>Aprende a elaborar bombas efervescentes artesanales.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-gift"></i>
-<h3>Shampoo Sólido</h3>
-<p>Elabora shampoo artesanal de alta calidad.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-gift"></i>
-<h3>Bálsamos Labiales</h3>
-<p>Crea bálsamos hidratantes para diferentes usos.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-gift"></i>
-<h3>Lista de Proveedores</h3>
-<p>Encuentra fácilmente los materiales que necesitas.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!--========================
-      CONTADOR
-=========================-->
-
-<section style="background:#be7b34;color:white;">
-
-<div class="container">
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;text-align:center;">
-
-<div>
-
-<h2 style="font-size:55px;">12.000+</h2>
-
-<p>Estudiantes</p>
-
-</div>
-
-<div>
-
-<h2 style="font-size:55px;">90+</h2>
-
-<p>Clases</p>
-
-</div>
-
-<div>
-
-<h2 style="font-size:55px;">100%</h2>
-
-<p>Online</p>
-
-</div>
-
-<div>
-
-<h2 style="font-size:55px;">∞</h2>
-
-<p>Acceso de por Vida</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!--========================
-      TESTIMONIOS
-=========================-->
-
-<section>
-
-<div class="container">
-
-<div class="title">
-
-<h2>Lo que dicen nuestros estudiantes</h2>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-⭐⭐⭐⭐⭐
-
-<h3>María G.</h3>
-
-<p>
-
-Nunca había hecho una vela y ahora incluso vendo mis productos.
-
-</p>
-
-</div>
-
-<div class="card">
-
-⭐⭐⭐⭐⭐
-
-<h3>Sandra R.</h3>
-
-<p>
-
-El curso explica absolutamente todo desde cero.
-
-</p>
-
-</div>
-
-<div class="card">
-
-⭐⭐⭐⭐⭐
-
-<h3>Andrea C.</h3>
-
-<p>
-
-Recuperé la inversión vendiendo mis primeras creaciones.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!--========================
-      FAQ
-=========================-->
-
-<section id="faq" style="background:#fff7ef;">
-
-<div class="container">
-
-<div class="title">
-
-<h2>Preguntas Frecuentes</h2>
-
-</div>
-
-<div class="card">
-
-<h3>¿Necesito experiencia?</h3>
-
-<p>No. El curso está diseñado para principiantes.</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>¿Cuánto dura el acceso?</h3>
-
-<p>El acceso es de por vida.</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>¿Cómo recibo el curso?</h3>
-
-<p>Inmediatamente después del pago.</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>¿Desde dónde puedo verlo?</h3>
-
-<p>Desde celular, computador o tablet.</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>¿Obtengo certificado?</h3>
-
-<p>Sí. Al finalizar podrás descargar tu certificado.</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!--========================
-      CTA FINAL
-=========================-->
-
-<section style="text-align:center;">
-
-<div class="container">
-
-<h2 style="font-size:48px;margin-bottom:25px;">
-
-Comienza Hoy Mismo
-
-</h2>
-
-<p style="font-size:22px;max-width:800px;margin:auto;margin-bottom:40px;">
-
-Aprende a crear velas y jabones artesanales para decorar, regalar o generar ingresos desde casa.
-
-</p>
-
-<a href="#" class="btn">
-
-QUIERO INSCRIBIRME AHORA
-
-</a>
-
-</div>
-
-</section>
-
-
-<!--========================
-      FOOTER
-=========================-->
-
-<footer style="background:#222;color:white;padding:60px 0;">
-
-<div class="container" style="text-align:center;">
-
-<h2 style="margin-bottom:20px;">
-
-🕯️ Manitas Creativas
-
-</h2>
-
-<p>
-
-Curso Online de Velas y Jabones Artesanales
-
-</p>
-
-<br>
-
-<p>
-
-© 2026 Todos los derechos reservados.
-
-</p>
-
-</div>
-
-</footer>
-
-
-<!--========================
- BOTÓN WHATSAPP
-=========================-->
-
-<a href="https://wa.me/573000000000"
-
-style="
-
-position:fixed;
-right:25px;
-bottom:25px;
-width:65px;
-height:65px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:34px;
-color:white;
-box-shadow:0 15px 30px rgba(0,0,0,.25);
-z-index:9999;
-
-">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">🕯️ Manualidades con Estilo</a>
+                <div class="nav-links">
+                    <a href="#beneficios">Beneficios</a>
+                    <a href="#galeria">Galería</a>
+                    <a href="#curso">Curso</a>
+                    <a href="#bonos">Bonos</a>
+                </div>
+                <a href="#" class="btn-nav">INSCRIBIRME</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container" style="display: flex; gap: 50px; align-items: center; flex-wrap: wrap;">
+            <div class="hero-content">
+                <span class="badge">✨ Curso 100% Online</span>
+                <h1>Aprende a crear Velas y Jabones Artesanales</h1>
+                <p>Domina paso a paso las técnicas más modernas para crear productos hermosos, decorar, regalar o emprender un negocio exitoso desde casa.</p>
+                
+                <div class="hero-features">
+                    <div class="feature-tag"><i class="fa-solid fa-graduation-cap"></i> +90 Clases</div>
+                    <div class="feature-tag"><i class="fa-solid fa-infinity"></i> Acceso de por Vida</div>
+                    <div class="feature-tag"><i class="fa-solid fa-bolt"></i> Sin Experiencia</div>
+                    <div class="feature-tag"><i class="fa-solid fa-award"></i> Certificado Oficial</div>
+                </div>
+
+                <a href="#" class="btn-main">QUIERO APRENDER AHORA</a>
+            </div>
+            
+            <div class="hero-image">
+                <!-- Imagen representativa premium del arte de velas y jabones -->
+                <img alt="Curso Velas y Jabones" src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=600&q=80">
+                <div class="stats-floating">
+                    <h3>+12.000</h3>
+                    <span>Alumnos Capacitados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por qué elegir este curso?</h2>
+                <p>Aprende con un método sencillo, práctico y pensado exclusivamente para personas que empiezan completamente desde cero.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Clases Paso a Paso</h3>
+                    <p>Aprende cada técnica detalladamente desde lo más básico hasta proyectos avanzados.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3>Disponible 24/7</h3>
+                    <p>Accede desde tu celular, computadora o tablet en el horario que prefieras.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-hourglass-start"></i>
+                    <h3>Acceso de por Vida</h3>
+                    <p>Compra una sola vez y disfruta de todo el contenido y sus actualizaciones para siempre.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Ideal para Emprender</h3>
+                    <p>Convierte esta hermosa habilidad en un negocio altamente rentable desde el primer mes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Optimizada -->
+    <section id="galeria" style="background-color: #f7f3eb;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Algunos proyectos que podrás crear</h2>
+                <p>Velas modernas con diseño y jabones artesanales terapéuticos con acabados completamente profesionales.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1608170825938-a8ea0305d46c?auto=format&fit=crop&w=500&q=80" alt="Vela de soja aromática">
+                    <div class="gallery-overlay"><h4>Velas Aromáticas de Soya</h4></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80" alt="Jabones Exfoliantes Naturales">
+                    <div class="gallery-overlay"><h4>Jabones Exfoliantes Orgánicos</h4></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1612214151430-c3d3f946f0ff?auto=format&fit=crop&w=500&q=80" alt="Velas de diseño Bubble">
+                    <div class="gallery-overlay"><h4>Velas de Molde Modernas (Bubble)</h4></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?auto=format&fit=crop&w=500&q=80" alt="Jabón artesanal de avena">
+                    <div class="gallery-overlay"><h4>Jabones Medicinales y de Avena</h4></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Detalles florales en velas">
+                    <div class="gallery-overlay"><h4>Velas Decorativas Elementales</h4></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=500&q=80" alt="Jabón de glicerina y cítricos">
+                    <div class="gallery-overlay"><h4>Técnicas de Color y Glicerina</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qué aprenderás -->
+    <section id="curso">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué aprenderás en el máster?</h2>
+                <p>Todo el contenido fue estructurado de forma pedagógica para que alcances resultados profesionales rápidamente.</p>
+            </div>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <i class="fa-solid fa-fire-burner"></i>
+                    <div>
+                        <h3>Velas Decorativas</h3>
+                        <p>Aprende velas Bubble, Pilar, Aromáticas, de temporada, flotantes, en vasos y el correcto uso de los pabilos.</p>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <i class="fa-solid fa-soap"></i>
+                    <div>
+                        <h3>Jabones Artesanales</h3>
+                        <p>Elabora jabones decorativos, terapéuticos, faciales, corporales y técnicas avanzadas de saponificación.</p>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <h3>Color y Fragancias</h3>
+                        <p>Descubre cómo calcular los porcentajes exactos de aromas, aceites esenciales y pigmentos sin arruinar tu mezcla.</p>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div>
+                        <h3>Estrategia de Ventas</h3>
+                        <p>Aprende paso a paso a calcular costos reales, colocar precios competitivos y lanzar tu marca en redes sociales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Todo lo que recibirás -->
+    <section class="included-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Todo lo que incluye tu inscripción</h2>
+            </div>
+            
+            <div class="included-grid">
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Curso de Velas</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Curso de Jabones</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Bonos Exclusivos</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Certificado Digital</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Actualizaciones</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Acceso Inmediato</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Acceso Vitalicio</div>
+                <div class="included-item"><i class="fa-solid fa-circle-check"></i> Soporte Privado</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonos -->
+    <section id="bonos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Además recibirás estos Bonos de Regalo</h2>
+                <p>Acceso completo e ilimitado hoy mismo sin ningún tipo de costo adicional.</p>
+            </div>
+            
+            <div class="bonuses-grid">
+                <div class="bonus-card">
+                    <span class="bonus-badge">Gratis</span>
+                    <i class="fa-solid fa-spa"></i>
+                    <h3>Bombas de Baño</h3>
+                    <p>Aprende a elaborar divertidas y relajantes bombas efervescentes artesanales.</p>
+                </div>
+                <div class="bonus-card">
+                    <span class="bonus-badge">Gratis</span>
+                    <i class="fa-solid fa-wind"></i>
+                    <h3>Shampoo Sólido</h3>
+                    <p>Elabora barras de shampoo natural y ecológico de excelente calidad comercial.</p>
+                </div>
+                <div class="bonus-card">
+                    <span class="bonus-badge">Gratis</span>
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Bálsamos Labiales</h3>
+                    <p>Crea bálsamos hidratantes 100% naturales para el cuidado diario.</p>
+                </div>
+                <div class="bonus-card">
+                    <span class="bonus-badge">Gratis</span>
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                    <h3>Lista de Proveedores</h3>
+                    <p>Contactos directos de proveedores de insumos confiables en tu país.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contadores -->
+    <section class="counters-bar">
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-item">
+                    <h2>12k+</h2>
+                    <p>Estudiantes</p>
+                </div>
+                <div class="counter-item">
+                    <h2>90+</h2>
+                    <p>Clases HD</p>
+                </div>
+                <div class="counter-item">
+                    <h2>100%</h2>
+                    <p>Online</p>
+                </div>
+                <div class="counter-item">
+                    <h2>∞</h2>
+                    <p>Acceso Vitalicio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que dicen nuestros estudiantes</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h3>María G.</h3>
+                    <p>"Nunca había hecho una sola vela y ahora, gracias a la claridad de las clases, tengo mi propia marca y vendo mis productos los fines de semana."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h3>Sandra R.</h3>
+                    <p>"El curso explica absolutamente todo desde cero. Los trucos sobre temperaturas y esencias valen oro, me ahorraron perder mucho material."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <h3>Andrea C.</h3>
+                    <p>"Excelente inversión. Recuperé lo que pagué por el curso vendiendo mis primeras creaciones de jabones terapéuticos a mis amigas."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Comienza Hoy Mismo</h2>
+            <p>No postergues más tu sueño de aprender un arte manual hermoso y rentable. Inscríbete ahora con precio promocional.</p>
+            <a href="#" class="btn-main">QUIERO INSCRIBIRME AHORA</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h2>🕯️ Manualidades con Estilo</h2>
+            <p>Curso Profesional Online de Velas y Jabones Artesanales</p>
+            <p style="margin-top: 20px; font-size: 14px; opacity: 0.5;">© 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/573000000000" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
-
 </html>
