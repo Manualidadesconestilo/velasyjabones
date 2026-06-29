@@ -452,36 +452,6 @@
             text-transform: uppercase;
         }
 
-        /* Testimonios */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .stars {
-            color: #ffb800;
-            margin-bottom: 16px;
-            font-size: 14px;
-        }
-
-        .testimonial-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-card p {
-            color: var(--text-light);
-            font-style: italic;
-        }
-
         /* CTA final */
         .cta-final {
             background: linear-gradient(rgba(44, 62, 53, 0.9), rgba(44, 62, 53, 0.9)), url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=80');
@@ -546,7 +516,7 @@
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; }
             .hero-features { justify-content: center; }
-            .benefits-grid, .gallery-grid, .included-grid, .bonuses-grid, .counters-grid, .testimonials-grid {
+            .benefits-grid, .gallery-grid, .included-grid, .bonuses-grid, .counters-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .topics-grid { grid-template-columns: 1fr; }
@@ -554,7 +524,7 @@
         }
 
         @media (max-width: 576px) {
-            .benefits-grid, .gallery-grid, .included-grid, .bonuses-grid, .counters-grid, .testimonials-grid {
+            .benefits-grid, .gallery-grid, .included-grid, .bonuses-grid, .counters-grid {
                 grid-template-columns: 1fr;
             }
             .hero h1 { font-size: 32px; }
@@ -574,7 +544,7 @@
                     <a href="#curso">Curso</a>
                     <a href="#bonos">Bonos</a>
                 </div>
-                <a href="#" class="btn-nav">INSCRIBIRME</a>
+                <a href="https://pay.hotmart.com/T96306980O?off=8ktju06n&checkoutMode=10&bid=1782762421645" target="_blank" class="btn-nav">INSCRIBIRME</a>
             </nav>
         </div>
     </header>
@@ -594,11 +564,10 @@
                     <div class="feature-tag"><i class="fa-solid fa-award"></i> Certificado Oficial</div>
                 </div>
 
-                <a href="#" class="btn-main">QUIERO APRENDER AHORA</a>
+                <a href="https://pay.hotmart.com/T96306980O?off=8ktju06n&checkoutMode=10&bid=1782762421645" target="_blank" class="btn-main">QUIERO APRENDER AHORA</a>
             </div>
             
             <div class="hero-image">
-                <!-- Imagen representativa premium del arte de velas y jabones -->
                 <img alt="Curso Velas y Jabones" src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=600&q=80">
                 <div class="stats-floating">
                     <h3>+12.000</h3>
@@ -641,38 +610,44 @@
         </div>
     </section>
 
-    <!-- Galería Optimizada -->
+    <!-- Galería con Fotos Reales de Velas Decorativas y Jabones Artesanales -->
     <section id="galeria" style="background-color: #f7f3eb;">
         <div class="container">
             <div class="section-header">
                 <h2>Algunos proyectos que podrás crear</h2>
-                <p>Velas modernas con diseño y jabones artesanales terapéuticos con acabados completamente profesionales.</p>
+                <p>Velas modernas decorativas de diseño y jabones artesanales terapéuticos con acabados profesionales.</p>
             </div>
             
             <div class="gallery-grid">
+                <!-- Foto 1: Vela decorativa de molde cilíndrica/escultural -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1608170825938-a8ea0305d46c?auto=format&fit=crop&w=500&q=80" alt="Vela de soja aromática">
-                    <div class="gallery-overlay"><h4>Velas Aromáticas de Soya</h4></div>
+                    <img src="https://images.unsplash.com/photo-1603006905393-d1431dae8e9c?auto=format&fit=crop&w=500&q=80" alt="Velas decorativas esculturales">
+                    <div class="gallery-overlay"><h4>Velas Decorativas Esculturales</h4></div>
                 </div>
+                <!-- Foto 2: Jabones artesanales texturizados y cortados en barra -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80" alt="Jabones Exfoliantes Naturales">
-                    <div class="gallery-overlay"><h4>Jabones Exfoliantes Orgánicos</h4></div>
+                    <img src="https://images.unsplash.com/photo-1607006342456-ba275cd34276?auto=format&fit=crop&w=500&q=80" alt="Jabones artesanales naturales">
+                    <div class="gallery-overlay"><h4>Jabones Artesanales Naturales</h4></div>
                 </div>
+                <!-- Foto 3: Velas decorativas modernas con formas geométricas (Bubble) -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1612214151430-c3d3f946f0ff?auto=format&fit=crop&w=500&q=80" alt="Velas de diseño Bubble">
-                    <div class="gallery-overlay"><h4>Velas de Molde Modernas (Bubble)</h4></div>
+                    <div class="gallery-overlay"><h4>Velas de Diseño (Estilo Bubble)</h4></div>
                 </div>
+                <!-- Foto 4: Jabones en barra con ingredientes botánicos visibles -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?auto=format&fit=crop&w=500&q=80" alt="Jabón artesanal de avena">
-                    <div class="gallery-overlay"><h4>Jabones Medicinales y de Avena</h4></div>
+                    <img src="https://images.unsplash.com/photo-1546554137-f86b9593a222?auto=format&fit=crop&w=500&q=80" alt="Jabón orgánico botánico">
+                    <div class="gallery-overlay"><h4>Jabones Terapéuticos y Botánicos</h4></div>
                 </div>
+                <!-- Foto 5: Velas aromáticas decoradas con flores secas en vaso -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Detalles florales en velas">
-                    <div class="gallery-overlay"><h4>Velas Decorativas Elementales</h4></div>
+                    <img src="https://images.unsplash.com/photo-1596434316655-a66d333d41a2?auto=format&fit=crop&w=500&q=80" alt="Velas decoradas con elementos naturales">
+                    <div class="gallery-overlay"><h4>Velas de Soya con Flores Secas</h4></div>
                 </div>
+                <!-- Foto 6: Barras limpias de jabón artesanal exfoliante -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=500&q=80" alt="Jabón de glicerina y cítricos">
-                    <div class="gallery-overlay"><h4>Técnicas de Color y Glicerina</h4></div>
+                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=500&q=80" alt="Proceso de jabones artesanales">
+                    <div class="gallery-overlay"><h4>Técnicas de Color y Exfoliación</h4></div>
                 </div>
             </div>
         </div>
@@ -800,39 +775,12 @@
         </div>
     </section>
 
-    <!-- Testimonios -->
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>Lo que dicen nuestros estudiantes</h2>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h3>María G.</h3>
-                    <p>"Nunca había hecho una sola vela y ahora, gracias a la claridad de las clases, tengo mi propia marca y vendo mis productos los fines de semana."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h3>Sandra R.</h3>
-                    <p>"El curso explica absolutamente todo desde cero. Los trucos sobre temperaturas y esencias valen oro, me ahorraron perder mucho material."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h3>Andrea C.</h3>
-                    <p>"Excelente inversión. Recuperé lo que pagué por el curso vendiendo mis primeras creaciones de jabones terapéuticos a mis amigas."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Final -->
     <section class="cta-final">
         <div class="container">
             <h2>Comienza Hoy Mismo</h2>
             <p>No postergues más tu sueño de aprender un arte manual hermoso y rentable. Inscríbete ahora con precio promocional.</p>
-            <a href="#" class="btn-main">QUIERO INSCRIBIRME AHORA</a>
+            <a href="https://pay.hotmart.com/T96306980O?off=8ktju06n&checkoutMode=10&bid=1782762421645" target="_blank" class="btn-main">QUIERO INSCRIBIRME AHORA</a>
         </div>
     </section>
 
